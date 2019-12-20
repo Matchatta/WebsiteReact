@@ -15,7 +15,7 @@ class Table extends Component{
         })
     }
     componentDidMount(){
-        fetch("http://localhost:9000/student/eligible")
+        fetch("https://class-attendance-260503.appspot.com/student/eligible")
         .then(res=> res.json())
         .then(data => this.setState({apiResponse: data}))
         .catch(error=> console.log(error)

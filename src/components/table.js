@@ -16,7 +16,7 @@ class Table extends Component{
     }
     onChangeSection(event){
         if(event.target.value!=""){
-        fetch("http://localhost:9000/student/section/"+event.target.value)
+        fetch("https://class-attendance-260503.appspot.com/student/section/"+event.target.value)
         .then(res=>res.json())
         .then(data=> this.setState({apiResponse: data}))
         }

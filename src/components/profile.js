@@ -18,7 +18,7 @@ class Profile extends Component{
             alert("Please select week")
         }
         else{
-            fetch("http://localhost:9000/student/check/"+sid,{
+            fetch("https://class-attendance-260503.appspot.com/student/check/"+sid,{
                 method: "POST",
                 body: JSON.stringify({
                     status: status,
