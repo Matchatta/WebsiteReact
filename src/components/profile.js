@@ -35,6 +35,18 @@ class Profile extends Component{
             })
         }
     }
+    generateName(){
+        var name = null
+        if(this.props.data.val.name == undefined){
+            console.log("Hi");
+            
+            name = <p className="mb-2">Name:</p>
+        }
+        else{
+            name = <p className="mb-2">Name: {this.props.data.val.name+" "+this.props.data.val.sirname}</p>
+        }
+        return name
+    }
     onChangeWeek(event){
         this.setState({week: event.target.value})
     }
@@ -63,7 +75,7 @@ class Profile extends Component{
                     <img className="rounded mx-auto d-block" src="https://drive.google.com/uc?id=1ELh12Hrs9T4Qy_oUBVDWqIU6thRTbUgO"  style={{width:"60%"}}></img>
                 </div>
                 <div className="text-center">
-                        <p className="mb-2">Name: {this.props.data.val.name}</p>
+                        {this.generateName()}
                         <p className="mb-2">Student ID: {this.props.data.val.sid}</p>
                         <p className="mb-2">Section: {this.props.data.val.section}</p>
                         <p className="mb-2">Time: {date.getHours()}:{date.getMinutes()}</p>

@@ -74,7 +74,7 @@ class Table extends Component{
                         </tbody>
                     </table>
                     </div>
-                    <div className="col-4 sticky-top" style={{boxShadow: "5px 10px 10px #c8cdcf"}}>
+                    <div className="col-4 sticky-top" style={{boxShadow: "5px 10px 10px #c8cdcf", height:"450px"}}>
                         <Profile
                             data = {this.state}
                         />
